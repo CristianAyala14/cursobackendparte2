@@ -1,0 +1,1 @@
+probamos como se puede guardar el token en una cookie, y recuperarla o NO poder recuperarla desde document.cookie por "httponly"
