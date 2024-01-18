@@ -1,6 +1,9 @@
-//funcion middelware para la estrategia, para poder controlar los errores y mensajes. (poner invalid token, o error token.)
-
 import passport from "passport";
+
+//funcion middelwares para la estrategia, 
+
+//1: para poder controlar los errores y mensajes. (poner invalid token, o error token.)
+
 export const passportCall = (strategy)=>{
     return async (req, res, next)=>{
         passport.authenticate(strategy, {session: false}, function(err,user,info){
@@ -13,3 +16,5 @@ export const passportCall = (strategy)=>{
         })(req,res,next) //esto es raro pero es lo q te devuelve la estrategia de autenticacion segun el profe, es una funcion anonima entonces se lo pasamos asi.
     }
 }
+
+//2: para autorizacion
