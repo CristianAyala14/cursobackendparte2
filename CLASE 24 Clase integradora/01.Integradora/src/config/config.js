@@ -55,7 +55,7 @@ const initializePassport = async()=>{
         done(null,user._id);
     })
     passport.deserializeUser(async(id,done)=>{
-        let result = await usersManager.findOne({_id:id})
+        let result = await usersManager.getBy({_id:id})
         return done(null,result)
     })
 }
