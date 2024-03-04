@@ -1,0 +1,48 @@
+OBJETO PROCESS
+Cuando ccreamos un app, servidor. se c rea el objeto "process" que 
+nos va a indicar el estado de nuestro servidor proyecto corriendo
+process.cwd(): muestra el directorio actual del prcoeso
+process.pid: id del proceso en el sistema
+process.MemoryUsage(): muestra la memoria en uso
+process.env: accede al objeto del entorno actual (DOTENV)
+process.argv: muestra los argumentos pasados por CLI (COMMANDER)
+process:version: Muestra la version del proceso (node en este caso)
+process.on(): permite setear un listener de eventos
+process.ext(): permite salir del proceso.
+
+ARCGUMENTOS EN CONSOLA:
+los argumentos permiten iniciar la ejecucion de un programa a partir de ciertos eleentos inciiales.
+Con argumentos podemos:
+setear configuraciones de arranque
+agregar valores predeterminados
+resolver outputs especificos
+process.argv tendra siempre dos elementos iniciales.
+
+PROCESAMEINTO DE AGUMENTOS CON COMANDER
+COMANDER: Libreria para manejo de argumentos
+npm i commander 
+
+MANEJO DE VARIABLES DE ENTORNO:
+variables que si las cambias pueden cambiar el entorno de jecucion del programa
+Con esto de los args, podemos setear entonrnos "admin, user" ect. lo mismo con el link de mongo db. 
+e n donde segun el entorno, trabajamos con distinta base de datos para pruebas.
+libreria que ayuda a administrar las varialbes de entorno: 
+
+dotenv: guarda todas las variables de entorno en un archivo.env 
+npm i dotenv
+
+
+RESUMEN: 
+objeto process: toda la ifnormacion del proceso de nuestra aplicacion
+process.env: toda la informacion del entorno actual (ESTO LO MANIPULAMOS MEDIANTE LA LIBRERIA DOTENV)
+process.argv: argumentos iniciales del proceso de nuestra aplicacion (ESTO LO SETEAMOS CON LA LIBRERIA COMMANDER )
+
+entrada por distintas entidades (prod, dev):  seteamos argumento modo:dev/prod por commander a process.argv, para que luego segun cual sea, preguntamos y cargamos mediante dotev
+a procees.env el entorno de ejcucion segun dev o prod-.
+
+
+-----------------------------------------------------------------------------------
+GLOBAL AND CHILD PROCESS: 
+Listeners: 
+
+
