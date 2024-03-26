@@ -18,7 +18,7 @@ app.get("/sumanobloqueante", (req,res)=>{
     const child = fork(path.join(__dirname, "/process/childProcess.js"))
     child.send("start");
     child.on("message", (result)=>{
-        res.send(`El resultado de la suma es: ${resultado}`)
+        res.send(`El resultado de la suma es: ${result}`)
     })
 
     const resultado = operacioncompleja();
