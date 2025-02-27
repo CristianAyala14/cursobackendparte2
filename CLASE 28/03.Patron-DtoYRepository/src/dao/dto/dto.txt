@@ -1,0 +1,2 @@
+Es como que parsea los datos del cliente cuando entran a nuestro backend y visebersa de manera de estandarizarlos y regularlos.
+Es mediante una clase instanciada a partir de un objeto. Ampliaremos.

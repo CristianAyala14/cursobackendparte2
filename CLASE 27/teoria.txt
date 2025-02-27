@@ -1,0 +1,9 @@
+patrones de diseño
+
+ejemplo patron de diseño singleton:
+
+El patrón de diseño Singleton garantiza que una clase tenga una sola instancia y 
+proporciona un punto de acceso global a esa instancia. Esto se logra mediante la restricción del 
+acceso al constructor y el control de la creación de instancias dentro de la propia clase. 
+Es útil cuando solo se necesita una única instancia de una clase en todo el programa, 
+como en el caso de objetos de configuración, conexiones a bases de datos, o recursos compartidos.

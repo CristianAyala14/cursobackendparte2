@@ -1,0 +1,11 @@
+Se levantara un servidor y un front end sencillo basado en html y javascript con el fin de 
+probar la conexion de origen.
+Se corroborara un conflicto de origen y su respectiva solucion.
+
+
+hicimos una peticion desde el frontend a nuestro backend pero no tienen el mismo origen, entonces hay que hacer que nuestro backend 
+Acepte origines extraños para las peticiones. Para eso utilizamos CORS como un middlware msa de express.
+pasos: 
+npm i cors
+import cors from "cors";
+app.use(cors());

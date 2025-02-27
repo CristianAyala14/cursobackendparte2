@@ -1,0 +1,10 @@
+Arquitectura de capas: Patron de diseño en el cual cada modulo en nuestra aplicacion son separados por capas. Una especie de separacion de funcionalidades, en "capas".
+La capa hace referencia a cada rol que debe cumplirse. 
+CAPA DE RENDERIZADO (VIEWS)
+CAPA DE LOGICA DE NEGOCIO (ROUTERS)
+CAPA DE SERVICIO (MANAGERS)
+CAPA DE PERSISTENCIA (MONGOOSE)
+
+
+orden de operacion:
+configuracion > persistencia > servicio > controlador > ruta > app

@@ -1,0 +1,11 @@
+entendiendo que jwt se puede obtener de los headers body o cookie, necesitaremos el estilo de "extraccion de token" que vayamos a utilizar
+
+passport, el nucleo de estrategias de autenticacion, y en el cual ahora integraremos jwt, con passport-jwt , no controla las cookies por si solo.
+ocupara una funcion personalizada por nosotros para extraer la cookie a lo cual llamaremos cookIeExtractor.
+
+YA QUE EL MODULO DE SESION ES QUIEN CONTROLABA LAS COOKIES Y AHORA NO LO UTILIZAMOS, TENDREMOS QUE VOLVER A UTILIZAR EL MODDELWARE DE COOKIEpARSER.
+
+si toda la estrategia queda bien configurada, passport contendra el usuario ya parseado a partir de un campo jwt_payload.
+
+asi que agregamos a lo que ya teniamos en 01
+passport y passport-jwt
