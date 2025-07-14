@@ -1,0 +1,9 @@
+Protocolo para mailing
+
+Utiliza puertos 25/tcp o 587/tcp o 465/tcp para smtps.
+
+NODEMAILER: Envio de mensajeria a partir de nuestras aplicaciones. Nos permite conectar con diferentes hosts y servicios de mensajeria.
+Para hacer envios se necesita un servicio habilitado para usar. Acoplamos a apis de terceros.
+
+Ejemplo con Nodemailr gmail: Hay que configurar gmail, google tiene una configuracion especial llamada "contraseña de aplicaciones" para utilizarla.
+Primero activar autenticacion en 2 pasos en cuenta de google.
