@@ -1,0 +1,10 @@
+TDD significa Test-Driven Development (Desarrollo guiado por pruebas).
+Es una metodología de desarrollo donde:
+
+En TDD (Test-Driven Development) la idea es:
+
+Escribir tests que cubran todos los casos posibles, incluidos los casos normales y los casos de error o borde (edge cases).
+
+Luego, ir desarrollando el código para que pase todos esos tests.
+
+Esto asegura que tu código funcione correctamente en todas las situaciones previstas y que no se rompa ante inputs inesperados.

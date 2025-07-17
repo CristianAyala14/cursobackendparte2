@@ -1,0 +1,98 @@
+versiones y paquetes:
+objetivos de la clase:
+-conocer y aplicar NVM como manejador de versiones de node.
+-profundizar sobre los administradores de paquetes
+-crear una dependencia propia para npm
+
+node version manager (nvm)
+administradores de paquete (yarn, alternativa a npm)
+produndizando npm (creacion de un modulo de npm)
+
+ADMINISTRADOR DE VERSIONES
+Node version manager:
+Software que nos permite descargar, instalar y cambiar versiones de node siempre que lo necesitemos.
+Asi podemos contar con un conjunto de entornos distintos para poder trabjar dcon multiples proyectos que requieran compatibilidades, sin afectar  los proyectos.
+Ademas nos permite probar funcionalidades nuevas como --watch (alternativa de nodemon)
+Como se instala NVM en Windows:
+Primero descargar desde la pagina de versiones de NVM.
+Luego debemos asegurarnos de eliminar la version de Node y npm que tengamos instaladas previo a instalar nvm.
+Ejectuar el instalador y seguir los pasos que indica.
+Ademas tendremos que definir el directorio de instalacion de node que funcionara como un enlace simbolico que apunta a la version actualmente utilizada de node.
+
+comandos:
+-nvm install node: instalamos ultima version de node
+-nvm list avadible: nos muestra que versiones podemos instalar
+-nvm install "version a instalar" 
+-nvm list: nos muestra las versiones que ya tenemos instaladas y disponibles
+-nvm use "versio que queremos usar": cuando queremos cambiar de version dentro de las que ya tenemos.
+
+Hay funcianlidades que estan ligadas a ciertas versiones. No hay que actualizar por actualizar.
+
+
+el engine en el json no es una practica general, osea poner el motor en el json, pero en algunos despliegues es necesario aclararlo
+
+{
+  "name": "01.nvm",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">20.11.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
+
+
+
+ADMINISTRADOR DE PAQUETES
+npm
+Siempre que necesitamos utilizar algun modulo externo para alguna solucion particular, ocupamos la funcionalidad de instalar dichos modulos de internet
+Al correr el comando npm install "nombre del paquete". Este se encargad e buscar en internet el paquete que estamos solicitando a partir de un repositorio en la pagina principal de npm.
+Una ves encontrado el paquete procede a instalarlo en nuestro proyecto y agregarlo al campo de dependencias.
+
+actualizacion de dependencias:
+mantenimiento de dependencias ya instaladas.
+nos permite verificar el manejador de pauqetes si hay una version actualizable.
+lo hacemos con npm outdate
+
+
+alternativa a npm: YARN
+desarrollado por facebook
+es mas rapida que usar npm
+se hace un chekeo de dependencias antes de instalarlas
+aprobechan la cache de la descarga.
+como instalar yarn:
+npm install -g yarn (npm ya viene con node predefinido, pero yarn no por eso hay q instalarlo)
+yarn --version : para ver la version instalada
+ya se puede usar.
+yarn init -y : inicia el proyecto aunque mas minimalista todo. 
+yarn add: agrega dependencias.ej: yarn add express
+yarn remove: deinstalarlas
+yarn es mucho mas seguro y cauteloso al momento de trabajar con dependencias, no puede generrar un package-lock.json como el que habitualmente conocemos
+yarn tiene su propio archivo .lock el cual le permite mantener la consistencia del versionado de los modulos que instala.
+Si mezclamos comandos de yarn add con npm install notaremos que yarn comenzara a preocuparse, advirtiendonos que no es la forma correcta de trabajar.
+no es seguro combinar ambos por q puede generar inconcistencias.
+
+
+profundizar en npm
+creacion de nuestro propio paquete y usar nuestro paquete
+
+package-lock.json:
+cuando instalamos una dependencia un lock se genera automaticamente para poder darnos un arbol de seguimiento de instalaciones realizadas asi se pueden instalar exactamente las mismas
+dependencias con exactamente las mismas versones indicadas en el lock, inpidiendo que se instalen elementos con alguna version desfasada
+al ser un arbol versionado podemos hacer un viaje en el tiempo a un node_modules previo en caso de ser necesario.
+
+npm ci:
+alternativa a npm install. a diferencia de un np, install habitual npm ci permitira realizar directamente la lectura e instalaciona partir del archivo package-lock.json
+esto permite generar un bloqueo en caso de que el package lock.json no haya sido añadido.
+
+npm audit: 
+realiza los problemas de seguridad y propone soluciones, te muestra la brecha de seguridad de los paquetes.
+
+

@@ -1,0 +1,3 @@
+Desarrollo preventivo a traves de mocks.
+Imitacion a datos reales para hacer pruebas. 
+libreria faker. Modulo pensado para crear pruebas  

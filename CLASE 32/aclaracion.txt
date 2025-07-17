@@ -1,0 +1,4 @@
+brotli consume mas recursos del backend y procesamiento pero comprime 30% mas, por ende la red es mas liviana
+Mientras que
+gzip consume menos del backend, y la red por ende es 30% mas pesada.
+Hay que elegir cuando usar cada uno.
