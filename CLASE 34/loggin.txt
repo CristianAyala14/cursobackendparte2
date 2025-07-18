@@ -1,0 +1,5 @@
+Aplicar console log para debug puede esr pasivamente bloqueante para nuestra aplicacion. Es por eso que usamos loggers para controlar esto.
+winstong es un logger que permite trabajar con multitransporters.
+Transporter, q ya utilizamos en mailing, permite enviar informacion.
+Winstong tiene transporters nativos que permiten que nuestros logs puedan ser enviados y salir en otros medios. 
+Escribirse en un archivo, o enviare a algunservidor externo por http.
