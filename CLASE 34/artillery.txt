@@ -1,0 +1,13 @@
+Funcionara nuestro server en un entorno real?
+Para verificar eso, y testear que nuestro codigo backend sea eficiente debemos testearlo
+simulando visitas recurrientes, es decir simulando el trafico de usuarios reales masivos en nuestro servidor.
+Es por eso que usamos artillery- A partir de una configuracion simple podemos simular usuarios virtuales
+los cuales emulan peticiones que necesitamos.
+ARTILLERY es una herramienta de performance que nos permite hacer pruebas para castigar al servidor simulando un entorno real.
+Es un toolkit.
+devuelve un reporte el cual podemos analizar reportes para tomar desiciones y arreglar nuestro servidor.
+
+instalacion: npm install -g artillery
+
+para usar no hay que hacer nada mas que poner en la carpeta donde esta la app.js ruta hacemos: 
+artillery quick --count40 (cantidad de usuarios) --num 50 (cantidad de peticiones) "http://localhost:8080/api/rutadeprueba" -o "json a donde va a ir"
